@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>LOAN DEFAULTERS</title>
+  </head>
+
+  <body style="background: #000">
+    <div class="login">
+      <h1 style="color: Violet">LOAN DEFAULTERS prediction</h1>
+
+      <form action="{{ url_for('predict')}}" method="post">
+        <input
+          type="text"
+          name="percent biking"
+          placeholder="Annual Salary"
+          required="required"
+        /><br />
+        <input
+          type="text"
+          name="percent smoking"
+          placeholder="Employed?"
+          required="required"
+        />
+        <p>
+          <button type="submit" class="btn btn-primary btn-block btn-large">
+            Predict loan default or not
+          </button>
+        </p>
+      </form>
+
+      <br />
+      <br />
+      <h4 style="color: Violet">{{ prediction_text }}</h4>
+    </div>
+  </body>
+</html>
